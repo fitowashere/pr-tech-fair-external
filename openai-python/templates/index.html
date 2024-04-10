@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Chat with the Bot</title>
+</head>
+<body>
+    <div class="maindiv">
+        <div class="container">
+            <h1>Chat with the Bot</h1>
+            <input type="text" id="messageInput" placeholder="Say Something..." />
+            <button onclick="sendMessage()">Send</button>
+            <div id="responseArea"></div>
+        </div>
+    </div>
+    <div class="chart-container">
+        <canvas id="responseGraph"></canvas>
+    </div>
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>
